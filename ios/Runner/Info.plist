@@ -66,5 +66,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>V-Sign cần quyền truy cập Camera để quét và phân tích các cử chỉ ngôn ngữ ký hiệu của bạn.</string>
 </dict>
 </plist>

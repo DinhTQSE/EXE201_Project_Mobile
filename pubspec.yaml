@@ -48,7 +48,6 @@ dependencies:
 
   # UI & Theme & Utilities
   google_fonts: ^6.2.1
-  lucide_icons: ^0.257.0
   flutter_svg: ^2.0.10+1
   cached_network_image: ^3.4.1
   percent_indicator: ^4.2.3
@@ -64,6 +63,9 @@ dependencies:
 
   # Camera
   camera: ^0.11.0+2
+  firebase_core: ^4.11.0
+  firebase_analytics: ^12.4.3
+  lucide_icons_flutter: ^3.1.14+2
 
 dev_dependencies:
   flutter_test:

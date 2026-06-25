@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:vsign_mobile_app/features/skeletons.dart';
+import 'package:vsign_mobile_app/features/navigation_shell.dart';
+import 'package:vsign_mobile_app/features/auth/presentation/login_screen.dart';
+import 'package:vsign_mobile_app/features/auth/presentation/register_screen.dart';
+import 'package:vsign_mobile_app/features/auth/presentation/profile_screen.dart';
+import 'package:vsign_mobile_app/features/course/presentation/courses_screen.dart';
+import 'package:vsign_mobile_app/features/course/presentation/lesson_detail_screen.dart';
+import 'package:vsign_mobile_app/features/dictionary/presentation/dictionary_screen.dart';
+import 'package:vsign_mobile_app/features/gamification/presentation/leaderboard_screen.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
 final GlobalKey<NavigatorState> _shellNavigatorKey = GlobalKey<NavigatorState>();
 
 final GoRouter appRouter = GoRouter(
   navigatorKey: _rootNavigatorKey,
-  initialLocation: '/login',
+  initialLocation: '/splash', // Start from splash screen to check auto login
   routes: [
     GoRoute(
       path: '/splash',
@@ -54,13 +61,6 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) {
         final lessonId = state.pathParameters['lessonId'] ?? '';
         return LessonDetailScreen(lessonId: lessonId);
-      },
-    ),
-    GoRoute(
-      path: '/camera-practice/:itemId',
-      builder: (context, state) {
-        final itemId = state.pathParameters['itemId'] ?? '';
-        return CameraPracticeScreen(itemId: itemId);
       },
     ),
   ],
